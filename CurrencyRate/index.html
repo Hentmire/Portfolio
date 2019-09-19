@@ -16,7 +16,7 @@
             </tr>
           </table>
         </section>
-        <section>
+        <section class="graph container">
           <div class="currency-choice">
             <span>Для построения графика изменения курса выберите одну или несколько валют:</span>
             <div class="checkbox-container">
@@ -32,11 +32,15 @@
               <label for="RUB">Российский рубль (RUB)</label>
             </div>
             <span>За период в 2018 году:</span>
-            <form>
-              <span>с</span>
-              <input class="date-input first-date" type="text" pattern="(0[1-9]|1[0-9]|2[0-9]|3[01])-(0[1-9]|1[012])" placeholder="ДД-ММ"/>
-              <span>по</span>
-              <input class="date-input second-date" type="text" pattern="(0[1-9]|1[0-9]|2[0-9]|3[01])-(0[1-9]|1[012])" placeholder="ДД-ММ"/>
+            <form class="">
+              <div class="date-container">
+                  <span>с</span>
+                  <input class="date-input first-date" type="text" pattern="(0[1-9]|1[0-9]|2[0-9]|3[01])-(0[1-9]|1[012])" placeholder="ДД-ММ"/>
+              </div>
+              <div class="date-container">
+                  <span>по</span>
+                  <input class="date-input second-date" type="text" pattern="(0[1-9]|1[0-9]|2[0-9]|3[01])-(0[1-9]|1[012])" placeholder="ДД-ММ"/>
+              </div>
               <div class="button-container">
                 <button type="submit" class="button" id="btn">Построить график</button>
               </div>
