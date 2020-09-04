@@ -9,7 +9,13 @@ function loadApplication(e) {
 
 	document.getElementById("btn").onclick = seachHero;
 
-	getHeroesRequest('https://swapi.co/api/people/') //сделать запрос по API и отрендерить страницу
+	getHeroesRequest('https://
+			 
+			 
+			 
+			 
+			 
+			 .dev/api/people/') //сделать запрос по API и отрендерить страницу
 	.then(data => {
 		let heroCount = data.count;
 		let pageCount = Math.ceil(heroCount / 10);
@@ -28,7 +34,7 @@ function seachHero(e) { //поиск по имени героя
 	e.preventDefault();
   let request = document.getElementById("search").value;
 
-	getHeroesRequest(`https://swapi.co/api/people/?search=${request}`)
+	getHeroesRequest(`https://swapi.dev/api/people/?search=${request}`)
 	.then(data => {
 		document.querySelector('.heroes-section').innerHTML = "<div class='hero-box'></div><div class='slider'></div>";
 		if(data.count == 0) {
@@ -123,7 +129,7 @@ function addSlider(pageCount) { //pagination
 				}
 				toggleInfo();
 			} else {
-				getHeroesRequest(`https://swapi.co/api/people/?page=${i+1}`)
+				getHeroesRequest(`https://swapi.dev/api/people/?page=${i+1}`)
 					.then(data => {
 						document.querySelector('.hero-box').innerHTML = '';
 						const heroInfo = getHeroInfo(data, i);
